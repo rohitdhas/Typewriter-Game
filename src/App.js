@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles.css";
+import { useEffect } from "react";
+import Navbar from "./Components/navBar";
+import TextField from "./Components/TextField";
+import Display from "./Components/Display";
+import { fetchAndSetParagraph } from "./helper/quoteHandler";
 
-function App() {
+
+export default function App() {
+
+  useEffect(() => {
+    fetchAndSetParagraph();
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+      <Navbar />
+      <Display />
+      <TextField />
+      <footer>
+        <p>Designed and Coded by</p>
+        <p id="link">
+          <a
+            href="https://www.linkedin.com/in/rohit-dhas-26b68215a/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Rohit Dhas
+          </a>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </footer>
     </div>
   );
 }
-
-export default App;

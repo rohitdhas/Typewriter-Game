@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.App {
+  max-width: 70vw;
+  margin: 0 auto;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 30px;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: rgb(57, 58, 75);
+}
+
+nav * {
+  margin: 0 10px;
+}
+
+/* Blink Animation */
+#timer.blink {
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  from {
+    color: rgb(57, 58, 75);
+  }
+  to {
+    color: tomato;
+  }
+}
+
+#display {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+#display > .loading_text {
+  color: rgb(101, 102, 117);
+}
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+  text-decoration: underline;
+}
+
+textarea {
+  max-width: 100%;
+  width: 100%;
+  height: 100px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 7px;
+  font-size: 1.3rem;
+}
+
+.score_board ul li {
+  list-style: none;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+.score_board ul li p {
+  margin: 0 5px;
+  display: inline;
+}
+
+.score_board h3 {
+  margin: 5px 0;
+}
+
+.score_board h3:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+footer {
+  margin: 20px 0;
+  padding: 10px;
+  border-top: 1px solid black;
+  font-weight: bold;
+}
+
+#link {
+  margin: 5px 0;
+}
+
+footer a:hover {
+  color: #0077b5;
+  text-decoration: none;
+}
